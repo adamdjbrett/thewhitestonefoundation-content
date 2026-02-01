@@ -1,0 +1,30 @@
+--- 
+layout: base.njk
+--- 
+{% include "schema-blog-post.njk" %}
+<article>
+  {% if image %}
+  <figure>
+    <img src="{{ image }}" alt="">
+  </figure>
+  {% endif %}
+  <h1>{{ title }}</h1>
+  <p>
+    {% if date %}<time datetime="{{ date }}">{{ date | readableDate }}</time>{% endif %}
+    {% if author %} | {{ author }}{% endif %}
+  </p>
+  {{ content | safe }}
+</article>
+
+{% set prevPost = collections.posts | getPrevPost(page) %}
+{% set nextPost = collections.posts | getNextPost(page) %}
+{% if prevPost or nextPost %}
+<nav class="post-nav" aria-label="Post navigation">
+  {% if prevPost %}
+  <a class="post-nav-prev" href="{{ prevPost.url }}">← Back</a>
+  {% endif %}
+  {% if nextPost %}
+  <a class="post-nav-next" href="{{ nextPost.url }}">Forward →</a>
+  {% endif %}
+</nav>
+{% endif %}

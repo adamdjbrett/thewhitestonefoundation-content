@@ -1,0 +1,6 @@
+
+# twtxt feed for The Whitestone Foundation
+
+2025-08-02T04:46:37.000Z	http://localhost:8080/higher-ed/we-need-a-total-makeover-of-higher-education-and-we-need-it-now/ — Rethinking Higher Education Totally…
+2025-08-02T05:55:46.000Z	http://localhost:8080/academia/announcing-whitestone-thought-leader-symposia/ — Announcing Whitestone Thought Leader Symposia
+
