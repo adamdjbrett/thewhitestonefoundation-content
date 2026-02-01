@@ -66,6 +66,17 @@ export default function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("stripHtml", (value) => {
+    if (!value) return "";
+    return value.toString().replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  });
+
+  eleventyConfig.addFilter("firstWords", (value, count = 200) => {
+    if (!value) return "";
+    const words = value.toString().split(/\s+/).filter(Boolean);
+    return words.slice(0, count).join(" ");
+  });
+
   return {
     dir: {
       input: "content",

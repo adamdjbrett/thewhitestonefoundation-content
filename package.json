@@ -4,12 +4,13 @@
   "type": "module",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy && npx pagefind --site _site --glob \"**/*.html\""
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
-    "markdown-it-footnote": "^4.0.0"
+    "markdown-it-footnote": "^4.0.0",
+    "pagefind": "^1.4.0"
   }
 }

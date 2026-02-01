@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title or metadata.title }}</title>
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    <meta data-pagefind-meta="title" content="{{ title or metadata.title }}">
+    {% if description %}<meta data-pagefind-meta="description" content="{{ description }}">{% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,10 +17,16 @@
   </head>
   <body>
     <header class="site-header">
-      <h1><a href="/"><img src="/images/whitestone-logo.png" alt="{{ metadata.title }}" style="max-height: 64px;"></a></h1>
+      <div class="site-branding">
+        <a href="/" class="site-logo">
+          <img src="/images/whitestone-logo.png" alt="{{ metadata.title }}" width="50" height="50">
+        </a>
+        <a href="/" class="site-title">{{ metadata.title }}</a>
+      </div>
       {% if metadata.description %}<p class="site-description">{{ metadata.description }}</p>{% endif %}
       {% if metadata.nav %}
       <nav class="site-nav" aria-label="Main">
+        <hr class="nav-rule">
         {% for item in metadata.nav %}
         {% if item.children %}
         <div class="nav-item has-dropdown">
@@ -34,7 +42,7 @@
         {% endif %}
         {% endfor %}
       </nav>
-      <hr class="nav-rule">
+      
       {% endif %}
     </header>
     <main>

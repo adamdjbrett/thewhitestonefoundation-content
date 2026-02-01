@@ -328,6 +328,24 @@ details details summary:hover {
   text-align: center;
 }
 
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-logo img {
+  max-height: 64px;
+  width: auto;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr;

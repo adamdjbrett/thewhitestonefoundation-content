@@ -16,6 +16,10 @@ export default {
       { label: "Videos", url: "/videos/" },
       { label: "Panelists", url: "/panelists/" }
     ]},
+    { label: "Search ︾", url: "/search/", children: [
+      { label: "Site Search", url: "/search/" },
+      { label: "Metadata Search", url: "/metadata/search/" }
+    ]},
     { label: "People", url: "/people/" },
     { label: "Contact", url: "/contact/" }
   ]
