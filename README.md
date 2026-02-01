@@ -1,5 +1,13 @@
 # The Whitestone Foundation (Eleventy)
 
-This repo contains the Eleventy conversion of the Whitestone Foundation site. It includes migrated WordPress content, normalized Markdown-It posts/pages, Pagefind search, and site feeds/sitemap.
+A clean, modern 11ty rebuild of the Whitestone Foundation site—migrated from WordPress, normalized, and ready to ship.
 
-See `CHAGNELOG.MD` for a detailed summary of changes completed in this chat.
+## Summary ✨
+- 🧱 WordPress → Eleventy conversion completed with Markdown-It cleanup
+- 🔎 Pagefind search + metadata search wired up for fast discovery
+- 🧭 Navigation + dropdowns tuned and aligned for a crisp header
+- 📰 Feeds, sitemap, robots, humans—all in place
+- 🖼️ Media organized and logo/favicon polished
+- 🧾 Redirects and permalinks normalized for clean URLs
+
+See [`CHAGNELOG.md`](CHAGNELOG.md) for the full detailed history.
